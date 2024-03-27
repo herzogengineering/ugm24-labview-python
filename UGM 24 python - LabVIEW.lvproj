@@ -11,20 +11,26 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="1_basic" Type="Folder" URL="../1_basic">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="1_basic" Type="Folder">
+			<Item Name="1_basic.py" Type="Document" URL="../1_basic/1_basic.py"/>
+			<Item Name="1_basic.vi" Type="VI" URL="../1_basic/1_basic.vi"/>
 		</Item>
-		<Item Name="2_venv" Type="Folder" URL="../2_venv">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="2_venv" Type="Folder">
+			<Item Name="2_venv.py" Type="Document" URL="../2_venv/2_venv.py"/>
+			<Item Name="2_venv.vi" Type="VI" URL="../2_venv/2_venv.vi"/>
 		</Item>
-		<Item Name="3_datatypes" Type="Folder" URL="../3_datatypes">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="3_datatypes" Type="Folder">
+			<Item Name="class" Type="Folder">
+				<Item Name="CalibReport" Type="Folder">
+					<Item Name="CalibReport.lvclass" Type="LVClass" URL="../3_datatypes/class/CalibReport/CalibReport.lvclass"/>
+				</Item>
+			</Item>
+			<Item Name="3_datatypes.py" Type="Document" URL="../3_datatypes/3_datatypes.py"/>
+			<Item Name="3_datatypes.vi" Type="VI" URL="../3_datatypes/3_datatypes.vi"/>
 		</Item>
-		<Item Name="4_oop" Type="Folder" URL="../4_oop">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="5_api" Type="Folder" URL="../5_api">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="4_oop" Type="Folder">
+			<Item Name="4_oop.py" Type="Document" URL="../4_oop/4_oop.py"/>
+			<Item Name="4_oop.vi" Type="VI" URL="../4_oop/4_oop.vi"/>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">

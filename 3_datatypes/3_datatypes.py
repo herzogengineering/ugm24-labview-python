@@ -1,5 +1,6 @@
 import json, random
 
+
 def dt_string(string) -> str:
     return string[::-1]
 
@@ -16,8 +17,10 @@ def dt_cluster() -> (bool, int, str):
 def dt_array(listinput) -> list:
     return listinput
 
+
 class CalibReport:
-    def __init__(self, user="Pythoneer", temperature=12.3, verification=[{"Reference [kg]":4, "DUT value [kg]": 4.02}]):
+    def __init__(self, user="Pythoneer", temperature=12.3,
+                 verification=[{"Reference [kg]": 4, "DUT value [kg]": 4.02}]):
         self.User = user
         self.Temperature = temperature
         self.Verification = verification
@@ -25,10 +28,7 @@ class CalibReport:
     def load_from_dict(self, **kwargs):
         self.__dict__.update(kwargs)
 
-    def __repr__(self):
-        print(self.__dict__)
-
-    def getDummy(self):
+    def setDummyValues(self):
         self.User = "Pythonuser"
         self.Temperature = 28.32
         self.Verification = [{"Reference [kg]": 4, "DUT value [kg]": 4},
@@ -41,10 +41,12 @@ class CalibReport:
 
         return self
 
+
 def dt_getobject() -> str:
     calib_report = CalibReport()
-    calib_report = calib_report.getDummy()
+    calib_report.setDummyValues()
     return json.dumps(calib_report.__dict__)
+
 
 def dt_setobject(jsonstring):
     # Load the object as a dictionary from json string
